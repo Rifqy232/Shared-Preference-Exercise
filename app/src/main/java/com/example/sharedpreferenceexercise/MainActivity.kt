@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private fun populateView(userModel: UserModel) {
         binding.tvName.text = if (userModel.name.toString().isEmpty()) "Tidak ada" else userModel.name
         binding.tvEmail.text = if (userModel.email.toString().isEmpty()) "Tidak ada" else userModel.email
-        binding.tvAge.text = if (userModel.age.toString().isEmpty()) "Tidak ada" else userModel.age.toString()
+        binding.tvAge.text = userModel.age.toString().ifEmpty { "Tidak ada" }
         binding.tvPhone.text = if (userModel.phoneNumber.toString().isEmpty()) "Tidak ada" else userModel.phoneNumber
         binding.tvIsLoveMu.text = if (userModel.isLove) "Ya" else "Tidak"
     }

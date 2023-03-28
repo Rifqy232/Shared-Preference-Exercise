@@ -95,7 +95,7 @@ class FormUserPreferenceActivity : AppCompatActivity(), View.OnClickListener {
             }
             if (!isValidEmail(email))
             if (phoneNo.isEmpty()) {
-                binding.edtPhone.error = FIELD_REQUIRED
+                binding.edtPhone.error = FIELD_IS_NOT_VALID
                 return
             }
             if (age.isEmpty()) {
